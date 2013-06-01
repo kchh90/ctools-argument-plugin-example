@@ -1,0 +1,16 @@
+<?php
+/**
+ * @file
+ * Code for the custom plugins.
+ */
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ *
+ * Tells ctools where to find the .inc files that define plugins.
+ */
+function custom_plugins_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'ctools' && !empty($plugin)) {
+    return "plugins/$plugin";
+  }
+}
